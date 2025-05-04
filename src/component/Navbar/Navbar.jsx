@@ -22,7 +22,7 @@ function Navbar() {
   const fetchData = () => {
     setLoading(true);
     if (msg === "Institute") {
-      axios.get(`/api/alldata`)
+      axios.get(`https://alumniconnectbackend.onrender.com/api/alldata`)
         .then(response => {
           setAlldata(response.data);
           setLoading(false);
@@ -33,7 +33,7 @@ function Navbar() {
           setLoading(false);
         });
     } else {
-      axios.post('/api/alumnidata', { email: decodedEmail })
+      axios.post('https://alumniconnectbackend.onrender.com/api/alumnidata', { email: decodedEmail })
         .then(response => {
           const { allalumni } = response.data;
           setAlldata(allalumni);
