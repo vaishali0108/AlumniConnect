@@ -19,7 +19,7 @@ function AddInstitute() {
   // After verification, update fields
   const handleAfterVerify = async (InstituteEmail) => {
     try {
-      const response = await axios.post('/api/register/verify', { InstituteEmail });
+      const response = await axios.post('https://alumniconnectbackend.onrender.com/api/register/verify', { InstituteEmail });
       const data = response.data;
       setInstituteName(data.instituteName || '');
       setAbout(data.about || '');
@@ -35,7 +35,7 @@ function AddInstitute() {
   // Send verification email
   const handleVerifyEmail = async () => {
     try {
-      await axios.post('/api/register', { InstituteEmail, instituteName, location, password, about });
+      await axios.post('https://alumniconnectbackend.onrender.com/api/register', { InstituteEmail, instituteName, location, password, about });
       setmsg('Verification link sent to your email');
       setShowAlert(true);
     } catch (error) {
@@ -53,7 +53,7 @@ function AddInstitute() {
       return;
     }
     try {
-      const response = await axios.post('/api/register/submit', {
+      const response = await axios.post('https://alumniconnectbackend.onrender.com/api/register/submit', {
         InstituteEmail,
         instituteName,
         location,
