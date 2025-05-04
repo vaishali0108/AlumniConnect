@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://alumniconnectbackend-3.onrender.com', 
+        target: 'https://alumniconnectbackend.onrender.com', 
         changeOrigin: true,
       }
     }
