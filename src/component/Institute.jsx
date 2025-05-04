@@ -12,7 +12,7 @@ function Institute() {
   const [loading, setLoading] = useState(true); // <-- Loading state
 
   const fetchData = () => {
-    axios.post('/api/alumnidata', { email: decodedEmail })
+    axios.post('https://alumniconnectbackend.onrender.com/api/alumnidata', { email: decodedEmail })
       .then(response => {
         const { allalumni, colleges } = response.data;
         setAllAlumni(allalumni);
