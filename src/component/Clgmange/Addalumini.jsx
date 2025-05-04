@@ -18,7 +18,7 @@ function Addalumini() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/aluminiregister', {
+      const response = await axios.post('https://alumniconnectbackend.onrender.com/api/aluminiregister', {
         studentName,
         degree,
         branch,
