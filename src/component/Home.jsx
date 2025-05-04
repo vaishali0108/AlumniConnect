@@ -9,7 +9,7 @@ function Home() {
   const [navbarData, setNavbarData] = useState([]); // Initialize as an array
 
   const fetchData = () => {
-    axios.get('/api/alldata')
+    axios.get('https://alumniconnectbackend.onrender.com/api/alldata')
       .then(response => {
         setNavbarData(response.data);
       })
