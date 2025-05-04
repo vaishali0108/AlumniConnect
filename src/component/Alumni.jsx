@@ -11,7 +11,7 @@ function Alumni() {
 
   useEffect(() => {
     axios
-      .post('/api/alumni', { linkedin: decodedUrl })
+      .post('https://alumniconnectbackend.onrender.com/api/alumni', { linkedin: decodedUrl })
       .then((res) => {
         setAlumni(res.data);
         setLoading(false);
