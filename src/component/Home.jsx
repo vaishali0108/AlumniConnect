@@ -54,7 +54,7 @@ function Home() {
               }, 300); 
             }}
           >
-            Our Proud Alumni
+            Institutes
           </button>
         </div>
       </div>
